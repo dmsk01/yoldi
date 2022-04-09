@@ -5,6 +5,9 @@
   @include adaptiveValue("font-size", 60, 36);
   line-height: 1;
   font-weight: 700;
+  &_dark {
+    color: $mainColor;
+  }
 }
 .subtitle {
   color: #fff;
@@ -107,5 +110,67 @@
     font-family: "OrenburgC", sans-serif;
     line-height: math.div(28, 20);
     cursor: pointer;
+  }
+}
+
+// Footer section - request for project
+
+.project-request {
+  &__container {
+  }
+  &__body {
+    background: url("../img/icons/big-grey-yo.svg") left 0 bottom 0 no-repeat, linear-gradient(to bottom, #cdcdcf, #cdcdcf);
+    background-size: percent(541, 1220) percent(337, 492);
+    padding: 120px 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @media (max-width: em(768)) {
+      padding: 60px 40px;
+      background-position: center top;
+      background-size: contain;
+    }
+  }
+  &__thank {
+    margin-bottom: 10px;
+  }
+  &__callfor {
+    margin-bottom: 44px;
+  }
+  &__button {
+  }
+}
+
+.button {
+  &_soaring {
+    color: $mainDark;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: $mainYellow;
+      transform: translate(-10px, 13px);
+    }
+    span {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      font-size: 20px;
+      line-height: math.div(28, 20);
+      padding: 30px 95px;
+      @media (max-width: em(480)) {
+        padding: 15px 50px;
+      }
+    }
   }
 }

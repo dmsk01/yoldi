@@ -1,6 +1,7 @@
 //====================================================================================================
 .nuero-page {
   @include adaptiveValue("padding-top", 120, 80);
+  @include adaptiveValue("padding-bottom", 100, 55);
 }
 //====================================================================================================
 
@@ -8,8 +9,6 @@
 
 .hero {
   padding: 60px 0;
-  &__container {
-  }
   &__info {
     display: flex;
     flex-direction: column;
