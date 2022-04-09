@@ -3,3 +3,256 @@
   @include adaptiveValue("padding-top", 120, 80);
 }
 //====================================================================================================
+
+// Hero nuero page ====
+
+.hero {
+  padding: 60px 0;
+  &__container {
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    width: 100%;
+    text-align: center;
+  }
+  &__year {
+    color: #8a8a97;
+    @include adaptiveValue("font-size", 30, 18);
+    @include adaptiveValue("line-height", 36, 25);
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 70, 30);
+    @include adaptiveValue("line-height", 70, 36);
+  }
+  &__desc {
+    @include adaptiveValue("font-size", 30, 18);
+    @include adaptiveValue("line-height", 36, 25);
+    margin-bottom: 30px;
+  }
+  &__tags {
+  }
+}
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: math.div(25, 18);
+  border-radius: 80px;
+  background-color: #414150;
+  @media (max-width: em(768)) {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+// Hero slider =======
+
+.slide-hero {
+  // position: relative;
+
+  // padding-bottom: percent(722, 1220);
+
+  &__inner {
+    // padding-right: 195px;
+    // padding-bottom: 40px;
+  }
+  &__big-image {
+    max-width: 1090px;
+  }
+  &__big-image-ibg_contain {
+    padding-bottom: percent(681, 1090);
+    img {
+      max-width: 1090px;
+      height: auto;
+      display: inline-block;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+  }
+  &__small-image {
+    margin-top: -40%;
+    margin-left: auto;
+    width: 100%;
+    position: absolute;
+  }
+  &__small-image-ibg {
+    padding-bottom: percent(245, 528);
+    max-width: percent(245, 1220);
+    @include adaptiveValue("height", 528, 153);
+    margin-left: auto;
+    z-index: 10;
+    img {
+      max-width: 245px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+  }
+}
+
+// Nuero about section
+
+.nuero-about {
+  @include adaptiveValue("margin-bottom", 100, 60);
+  &__container {
+    @media (max-width: em(768)) {
+      padding: 0 30px;
+    }
+  }
+  &__project {
+    @include adaptiveValue("margin-bottom", 80, 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: em(768)) {
+      flex-direction: column;
+    }
+  }
+  &__main {
+    max-width: 590px;
+    width: 100%;
+    padding-right: 20px;
+    @media (max-width: em(768)) {
+      padding-right: 0;
+      margin-bottom: 30px;
+      max-width: none;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    span {
+      color: $mainYellow;
+    }
+  }
+  &__nft {
+    max-width: 380px;
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: $mainYellow;
+    }
+    @media (max-width: em(768)) {
+      padding-left: 20px;
+      max-width: none;
+    }
+  }
+  &__aside-title {
+    margin-bottom: 20px;
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
+    }
+  }
+  &__users {
+    @media (max-width: em(768)) {
+      margin: 0 -20px;
+    }
+  }
+}
+
+.users-about {
+  padding: 30px;
+  background: #e9e9e9;
+  color: $mainDark;
+  @media (max-width: em(768)) {
+    padding: 20px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $mainDark;
+    }
+    @media (max-width: em(768)) {
+      margin-bottom: 20px;
+    }
+  }
+  &__inner {
+    @media (min-width: em(768)) {
+      display: flex;
+      margin: 0 -30px;
+    }
+  }
+  &__user {
+    @media (min-width: em(768)) {
+      padding: 0 30px;
+      flex: 0 1 50%;
+    }
+  }
+}
+.about-user {
+  &:first-child {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      background: url("../img/icons/vertical-dash.svg") 0 0 repeat-y;
+    }
+    @media (max-width: em(768)) {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      &::after {
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        right: 0;
+        background: url("../img/icons/horisontal-dash.svg") 0 0 repeat-x;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__desc {
+  }
+}

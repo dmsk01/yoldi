@@ -2,14 +2,35 @@
 .title {
   color: #fff;
   font-size: 60px;
+  @include adaptiveValue("font-size", 60, 36);
   line-height: 1;
   font-weight: 700;
+}
+.subtitle {
+  color: #fff;
+  font-size: 30px;
+  @include adaptiveValue("font-size", 30, 20);
+  line-height: math.div(36, 30);
+  font-weight: 700;
+  &_dark {
+    color: $mainColor;
+  }
+  &_thin {
+    font-weight: 400;
+  }
+  &_noshrink {
+    font-size: 30px;
+  }
 }
 
 .text {
   font-size: 20px;
+  @include adaptiveValue("font-size", 20, 16);
   line-height: calc(32 / 20 * 100%);
   color: #fff;
+  &_dark {
+    color: $mainDark;
+  }
 }
 
 .float-block {
