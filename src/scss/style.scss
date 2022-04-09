@@ -50,7 +50,11 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-  background: $mainDark;
+  min-height: 100%;
+  background: rgba($mainDark, 0.9);
+  background-image: linear-gradient(to bottom, rgba($mainDark, 0) 63%, rgba($mainDark, 1) 82%), linear-gradient(to bottom, rgba($mainDark, 0.8) 0, rgba($mainDark, 0.9) 82%), url("@img/nuero/bg.png");
+  background-size: cover;
+  background-position: center;
   color: #fff;
   // Скролл заблокирован
   .lock & {
