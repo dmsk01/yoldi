@@ -113,6 +113,18 @@
   }
 }
 
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
 .tag {
   display: inline-block;
   padding: 10px 20px;
@@ -133,7 +145,6 @@
 // Footer section - request for project
 
 .project-request {
-
   &__body {
     background: url("../img/icons/big-grey-yo.svg") left 0 bottom 0 no-repeat,
       linear-gradient(to bottom, #cdcdcf, #cdcdcf);
