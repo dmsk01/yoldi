@@ -120,6 +120,10 @@
   line-height: math.div(25, 18);
   border-radius: 80px;
   background-color: #414150;
+  &_yellow {
+    background-color: $mainYellow;
+    color: $mainDark;
+  }
   @media (max-width: em(768)) {
     padding: 5px 10px;
     font-size: 14px;
@@ -129,10 +133,10 @@
 // Footer section - request for project
 
 .project-request {
-  &__container {
-  }
+
   &__body {
-    background: url("../img/icons/big-grey-yo.svg") left 0 bottom 0 no-repeat, linear-gradient(to bottom, #cdcdcf, #cdcdcf);
+    background: url("../img/icons/big-grey-yo.svg") left 0 bottom 0 no-repeat,
+      linear-gradient(to bottom, #cdcdcf, #cdcdcf);
     background-size: percent(541, 1220) percent(337, 492);
     padding: 120px 105px;
     display: flex;

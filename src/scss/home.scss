@@ -36,6 +36,9 @@
     @include adaptiveValue("line-height", 36, 25);
     margin-bottom: 30px;
   }
+  &__tags {
+    justify-content: center;
+  }
   &__paggination {
   }
 }
@@ -89,7 +92,6 @@
 .tags {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   &__item {
     margin-bottom: 10px;
@@ -276,5 +278,109 @@
     margin-bottom: 10px;
   }
   &__desc {
+  }
+}
+
+// Nuero project composition section ====
+
+.nuero-composition {
+  &__container {
+  }
+
+  &__header {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: math.div(44, 40);
+    font-weight: 700;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__tags {
+  }
+
+  &__main {
+  }
+}
+
+.nuero-main-composition {
+  &__catalog {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+
+  &__art-page {
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    @include adaptiveValue("margin-bottom", 90, 30);
+    @media (max-width: em(768)) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    flex: 0 1 380px;
+    max-width: 380px;
+    width: 100%;
+    @include adaptiveValue("margin-right", 40, 0);
+    @media (max-width: em(768)) {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+  }
+
+  &__content {
+  }
+}
+
+.art-page {
+  @include adaptiveValue("margin-bottom", 100, 60);
+  &__info {
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__activities-history {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__activity {
+    flex: 0 1 33.333%;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+
+  &__content {
+    @include adaptiveValue("margin-bottom", 80, 30);
   }
 }
