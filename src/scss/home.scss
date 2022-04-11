@@ -314,6 +314,11 @@
 
 .art-page {
   @include adaptiveValue("margin-bottom", 100, 60);
+  &__info {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
   &__title {
     margin-bottom: 30px;
     @media (max-width: em(768)) {
