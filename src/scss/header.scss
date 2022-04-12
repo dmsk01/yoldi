@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1000000;
   width: 100%;
   min-height: 80px;
   @include adaptiveValue("min-height", 120, 80);
@@ -39,7 +40,7 @@
     align-items: center;
     background-color: $lightGrey;
     position: relative;
-    z-index: 5;
+    z-index: 1000000;
     svg {
       @include adaptiveValue("max-width", 108, 57);
       width: 100%;
@@ -90,6 +91,7 @@
       position: fixed;
       top: 0;
       left: -100%;
+      z-index: 100001;
       width: 100%;
       height: 100%;
       overflow-y: auto;
@@ -294,7 +296,7 @@
     width: rem(22);
     height: rem(12);
     cursor: pointer;
-    z-index: 5;
+    z-index: 1000000;
     span,
     &::before,
     &::after {

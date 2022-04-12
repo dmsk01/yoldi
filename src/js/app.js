@@ -1,19 +1,3 @@
-/*
-(i) Код попадает в итоговый файл,
-только когда вызвана функция,
-например flsFunctions.spollers();
-Или когда импортирован весь файл,
-например import "files/script.js";
-Неиспользуемый (не вызванный)
-код в итоговый файл не попадает.
-
-Если мы хотим добавить модуль
-следует его расскоментировать
-*/
-
-// Включить/выключить FLS (Full Logging System) (в работе)
-window["FLS"] = true;
-
 // Подключение основного файла стилей
 import "../scss/style.scss";
 
@@ -141,11 +125,7 @@ import "./files/sliders.js";
 */
 // import './files/scroll/simplebar.js';
 
-// Ленивая (отложенная) загрузка картинок
-// Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
-// Документация плагина: https://github.com/verlok/vanilla-lazyload
-// Сниппет(HTML):
-// import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
