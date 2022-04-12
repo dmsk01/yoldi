@@ -331,6 +331,12 @@
   &__users-page {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__chats {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+  &__journal {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 .art-page {
@@ -529,6 +535,26 @@
 // Users page block ====
 
 .users-page {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+}
+
+// Chats block ====
+
+.chats-nuero {
+  &__info {
+    max-width: 1010px;
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+  &__title {
+    min-width: 275px;
+  }
+}
+
+// Journal section nuero page ====
+
+.journal-nuero {
   &__info {
     @include adaptiveValue("margin-bottom", 80, 30);
   }
