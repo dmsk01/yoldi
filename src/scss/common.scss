@@ -208,7 +208,20 @@
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-
+  &_long {
+    display: flex;
+    align-items: flex-start;
+    max-width: none;
+    .info-block__title {
+      margin-right: 40px;
+    }
+    @media (max-width: em(768)) {
+      flex-direction: column;
+      .info-block__title {
+        margin-right: 0;
+      }
+    }
+  }
   &__title {
     margin-bottom: 30px;
     @media (max-width: em(768)) {

@@ -93,6 +93,15 @@
 
 .couple-images {
   max-width: 100%;
+  &_big {
+    .couple-images__big-image,
+    .couple-images__small-image {
+      max-width: percent(942, 1220);
+    }
+    .couple-images__big-image {
+      padding-bottom: percent(412, 1220);
+    }
+  }
   &__inner {
     display: flex;
     position: relative;
@@ -314,6 +323,14 @@
   &__artists-verification {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+
+  &__users-catalog {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+
+  &__users-page {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 .art-page {
@@ -497,5 +514,22 @@
       border-radius: 7px;
       overflow: hidden;
     }
+  }
+}
+
+// Users catalog block =====
+
+.users-catalog {
+  &__info {
+    max-width: 1010px;
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+}
+
+// Users page block ====
+
+.users-page {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
   }
 }
