@@ -4,33 +4,33 @@
       <h2 class="nuero-composition__title">Состав проекта</h2>
       <ul class="nuero-composition__tags tags">
         <li class="tags__item">
-          <span class="tag tag_yellow">Каталог</span>
+          <a href="#catalog-nuero" class="tag tag_yellow">Каталог</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Операции</span>
+          <a href="#operations-nuero" class="tag">Операции</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Торги</span>
+          <a href="#bid-tracking" class="tag">Торги</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Верификация</span>
+          <a href="#verification" class="tag">Верификация</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Пользователи</span>
+          <a href="#nuero-users-catalog" class="tag">Пользователи</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Чаты</span>
+          <a href="#nuero-chats" class="tag">Чаты</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Журнал</span>
+          <a href="#journal-nuero" class="tag">Журнал</a>
         </li>
         <li class="tags__item">
-          <span class="tag">Лента</span>
+          <a href="#nuero-feed-line" class="tag">Лента</a>
         </li>
       </ul>
     </header>
     <main class="nuero-composition__main nuero-main-composition">
-      <article class="nuero-main-composition__catalog">
+      <article id="catalog-nuero" class="nuero-main-composition__catalog">
         <div class="nuero-main-composition__info">
           <h3 class="nuero-main-composition__title title">Каталог артов</h3>
           <p class="nuero-main-composition__text text">
@@ -60,7 +60,8 @@
           </div>
         </div>
       </article>
-      <article class="nuero-main-composition__art-page art-page">
+
+      <article id="art-page" class="nuero-main-composition__art-page art-page">
         <div class="art-page__info">
           <h3 class="art-page__title title">Страница арта</h3>
           <p class="art-page__text text">
@@ -114,7 +115,9 @@
           </div>
         </div>
       </article>
+
       <article
+        id="operations-nuero"
         class="nuero-main-composition__transaction-operations transaction-composition"
       >
         <div class="transaction-composition__info">
@@ -175,16 +178,20 @@
           </div>
         </div>
       </article>
-      <article class="nuero-main-composition__bid-tracking art-page">
-        <div class="art-page__info">
-          <h3 class="art-page__title title">Отслеживание торгов</h3>
-          <p class="art-page__text text">
+
+      <article
+        id="bid-tracking"
+        class="nuero-main-composition__bid-tracking bid-tracking"
+      >
+        <div class="bid-tracking__info info-block">
+          <h3 class="info-block__title title">Отслеживание торгов</h3>
+          <p class="info-block__text text">
             Свои активности по маркету пользователи могут отслеживать в разделе
             Торги. Тут хранится вся история покупок и продаж, предложений и
             участия в аукционах.
           </p>
         </div>
-        <div class="art-page__content">
+        <div class="bid-tracking__content">
           <div class="couple-images">
             <div class="couple-images__inner">
               <div class="couple-images__big-image">
@@ -205,6 +212,7 @@
       </article>
 
       <article
+        id="verification"
         class="nuero-main-composition__artists-verification artists-verification"
       >
         <div class="artists-verification__info info-block">
@@ -243,7 +251,10 @@
         </div>
       </article>
 
-      <article class="nuero-main-composition__users-catalog users-catalog">
+      <article
+        id="nuero-users-catalog"
+        class="nuero-main-composition__users-catalog users-catalog"
+      >
         <div class="users-catalog__info info-block info-block_long">
           <h3 class="info-block__title title">Каталог пользователей</h3>
           <p class="info-block__text text">
@@ -279,7 +290,10 @@
           <div class="couple-images couple-images_big">
             <div class="couple-images__inner">
               <div class="couple-images__big-image">
-                <img data-src="@img/nuero/user-page/01.png" alt="Update feed line" />
+                <img
+                  data-src="@img/nuero/user-page/01.png"
+                  alt="Update feed line"
+                />
               </div>
               <div class="couple-images__small-image">
                 <img
@@ -292,7 +306,10 @@
         </div>
       </article>
 
-      <article class="nuero-main-composition__chats chats-nuero">
+      <article
+        id="nuero-chats"
+        class="nuero-main-composition__chats chats-nuero"
+      >
         <div class="chats-nuero__info info-block info-block_long">
           <h3 class="info-block__title chats-nuero__title title">Чаты</h3>
           <p class="info-block__text text">
@@ -323,7 +340,10 @@
         </div>
       </article>
 
-      <article class="nuero-main-composition__journal journal-nuero">
+      <article
+        id="journal-nuero"
+        class="nuero-main-composition__journal journal-nuero"
+      >
         <div class="journal-nuero__info info-block">
           <h3 class="info-block__title title">Журнал</h3>
           <p class="info-block__text text">
@@ -352,7 +372,10 @@
         </div>
       </article>
 
-      <article class="nuero-main-composition__update-feed-line art-page">
+      <article
+        id="nuero-feed-line"
+        class="nuero-main-composition__update-feed-line art-page"
+      >
         <div class="art-page__info">
           <h3 class="art-page__title title">Лента обновлений</h3>
           <p class="art-page__text text">

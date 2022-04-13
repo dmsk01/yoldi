@@ -136,6 +136,10 @@
     background-color: $mainYellow;
     color: $mainDark;
   }
+  &:active {
+    background-color: $mainYellow;
+    color: $mainDark;
+  }
   @media (max-width: em(768)) {
     padding: 5px 10px;
     font-size: 14px;

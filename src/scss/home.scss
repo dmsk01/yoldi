@@ -293,6 +293,16 @@
 }
 
 .nuero-main-composition {
+  &__title {
+    flex: 0 1 380px;
+    max-width: 380px;
+    width: 100%;
+    @include adaptiveValue("margin-right", 40, 0);
+    @media (max-width: em(768)) {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+  }
   &__catalog {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
@@ -308,16 +318,9 @@
   &__transaction-operations {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
-
-  &__title {
-    flex: 0 1 380px;
-    max-width: 380px;
-    width: 100%;
-    @include adaptiveValue("margin-right", 40, 0);
-    @media (max-width: em(768)) {
-      flex: 1 1 100%;
-      margin-bottom: 10px;
-    }
+  
+  &__bid-tracking {
+    @include adaptiveValue("margin-bottom", 100, 60);
   }
 
   &__artists-verification {
@@ -431,6 +434,12 @@
 
   &__images {
     flex: 1 1 auto;
+  }
+}
+
+.bid-tracking {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
   }
 }
 
