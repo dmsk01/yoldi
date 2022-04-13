@@ -318,7 +318,7 @@
   &__transaction-operations {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
-  
+
   &__bid-tracking {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
@@ -356,24 +356,6 @@
     }
   }
 
-  &__activities-history {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  &__activity {
-    flex: 0 1 33.333%;
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-    img {
-      width: 100%;
-      object-fit: contain;
-      border-radius: 7px;
-      overflow: hidden;
-    }
-  }
-
   &__text {
     max-width: 800px;
     width: 100%;
@@ -383,6 +365,20 @@
 
   &__content {
     @include adaptiveValue("margin-bottom", 80, 30);
+  }
+}
+
+.activities-history {
+  &__wrapper {
+  }
+
+  &__activity {
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 7px;
+      overflow: hidden;
+    }
   }
 }
 

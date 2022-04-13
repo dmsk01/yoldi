@@ -105,6 +105,76 @@ function initSliders() {
       on: {},
     });
   }
+  if (document.querySelector(".swiper-activities-history")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".swiper-activities-history", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 0,
+      autoHeight: true,
+      speed: 800,
+
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: false,
+      // preloadImages: false,
+      // lazy: true,
+
+      // Эффекты
+      // effect: "fade",
+      // fadeEffect: {
+      //   crossFade: true,
+      // },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+
+      // Пагинация
+
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      // navigation: {
+      //   prevEl: ".swiper-button-prev",
+      //   nextEl: ".swiper-button-next",
+      // },
+
+      // Брейкпоинты
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1.3,
+          spaceBetween: 15,
+          autoHeight: true,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+
+      // События
+      on: {},
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
@@ -112,7 +182,8 @@ function initSlidersScroll() {
   if (sliderScrollItems.length > 0) {
     for (let index = 0; index < sliderScrollItems.length; index++) {
       const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar = sliderScrollItem.querySelector(".swiper-scrollbar");
+      const sliderScrollBar =
+        sliderScrollItem.querySelector(".swiper-scrollbar");
       const sliderScroll = new Swiper(sliderScrollItem, {
         observer: true,
         observeParents: true,
