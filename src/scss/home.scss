@@ -38,6 +38,9 @@
   }
   &__tags {
     justify-content: center;
+    .tag {
+      cursor: pointer;
+    }
   }
   &__paggination {
   }
@@ -345,9 +348,7 @@
 .art-page {
   @include adaptiveValue("margin-bottom", 100, 60);
   &__info {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 80, 30);
   }
   &__title {
     margin-bottom: 30px;
@@ -361,6 +362,9 @@
     width: 100%;
     margin: 0 auto;
     @include adaptiveValue("margin-bottom", 80, 30);
+    @media (max-width: em(768)) {
+      padding: 0 20px;
+    }
   }
 
   &__content {
@@ -424,6 +428,7 @@
       flex: 1 1 100%;
       margin-right: 0;
       margin-bottom: 30px;
+      padding: 0 20px;
       max-width: none;
     }
   }

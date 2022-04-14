@@ -30,13 +30,15 @@ $maxWidth: 1920;
 $maxWidthContainer: 1220;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 20;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em(
+  $containerWidth
+); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
@@ -52,7 +54,14 @@ $responsiveType: 1;
 body {
   min-height: 100%;
   background: $mainDark;
-  background-image: linear-gradient(to bottom, rgba($mainDark, 0) 63%, rgba($mainDark, 1) 82%), linear-gradient(to bottom, rgba($mainDark, 0.8) 0, rgba($mainDark, 0.9) 82%), url("@img/nuero/bg.png"), linear-gradient(to bottom, rgba($mainDark, 1) 82%, rgba($mainDark, 1) 100%);
+  background-image: linear-gradient(
+      to bottom,
+      rgba($mainDark, 0) 63%,
+      rgba($mainDark, 1) 82%
+    ),
+    linear-gradient(to bottom, rgba($mainDark, 0.8) 0, rgba($mainDark, 0.9) 82%),
+    url("@img/nuero/bg.png"),
+    linear-gradient(to bottom, rgba($mainDark, 1) 82%, rgba($mainDark, 1) 100%);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
