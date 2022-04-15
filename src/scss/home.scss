@@ -20,6 +20,7 @@
     text-align: center;
   }
   &__year {
+    margin-bottom: 13px;
     color: #8a8a97;
     @include adaptiveValue("font-size", 30, 18);
     @include adaptiveValue("line-height", 36, 25);
@@ -104,6 +105,11 @@
     .couple-images__big-image {
       padding-bottom: percent(412, 1220);
     }
+    .couple-images__small-image {
+      img {
+        border-radius: 7px;
+      }
+    }
   }
   &__inner {
     display: flex;
@@ -129,8 +135,14 @@
     img {
       width: 100%;
       object-fit: contain;
-      border-radius: 7px;
+      border-radius: 15px;
       overflow: hidden;
+      @media (max-width: em(768)) {
+        border-radius: 7px;
+      }
+      @media (max-width: em(480)) {
+        border-radius: 4px;
+      }
     }
   }
 }
@@ -282,6 +294,9 @@
 .nuero-composition {
   &__header {
     @include adaptiveValue("margin-bottom", 100, 60);
+    @media (max-width: em(768)) {
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -315,7 +330,12 @@
     @include adaptiveValue("margin-bottom", 90, 30);
     @media (max-width: em(768)) {
       flex-direction: column;
+      padding: 0 20px;
     }
+  }
+
+  &__text {
+    max-width: 800px;
   }
 
   &__transaction-operations {
@@ -370,12 +390,15 @@
   &__content {
     @include adaptiveValue("margin-bottom", 80, 30);
   }
+
+  &__activities-history {
+    @media (max-width: em(768)) {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .activities-history {
-  &__wrapper {
-  }
-
   &__activity {
     img {
       width: 100%;
@@ -540,6 +563,12 @@
     max-width: 1010px;
     @include adaptiveValue("margin-bottom", 80, 30);
   }
+  &__text {
+    max-width: 485px;
+    @media (max-width: em(768)) {
+      max-width: none;
+    }
+  }
 }
 
 // Users page block ====
@@ -565,6 +594,12 @@
 // Journal section nuero page ====
 
 .journal-nuero {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+}
+
+.update-feed-line {
   &__info {
     @include adaptiveValue("margin-bottom", 80, 30);
   }

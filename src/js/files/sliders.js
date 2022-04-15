@@ -4,16 +4,7 @@
 Сниппет(HTML): swiper
 */
 
-// Подключаем слайдер Swiper из node_modules
-// При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
-// Пример: { Navigation, Autoplay }
 import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
-/*
-Основниые модули слайдера:
-Navigation, Pagination, Autoplay, 
-EffectFade, Lazy, Manipulation
-Подробнее смотри https://swiperjs.com/
-*/
 
 // Стили Swiper
 // Базовые стили
@@ -25,15 +16,8 @@ import "../../scss/base/swiper.scss";
 
 // Инициализация слайдеров
 function initSliders() {
-  // Перечень слайдеров
-  // Проверяем, есть ли слайдер на стронице
   if (document.querySelector(".swiper")) {
-    // Указываем скласс нужного слайдера
-    // Создаем слайдер
     new Swiper(".swiper", {
-      // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
       modules: [Navigation, Pagination, Autoplay, EffectFade],
       observer: true,
       observeParents: true,
@@ -106,18 +90,13 @@ function initSliders() {
     });
   }
   if (document.querySelector(".swiper-activities-history")) {
-    // Указываем скласс нужного слайдера
-    // Создаем слайдер
     new Swiper(".swiper-activities-history", {
-      // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
       modules: [Navigation],
       observer: true,
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 0,
-      autoHeight: true,
+      // autoHeight: true,
       speed: 800,
 
       //touchRatio: 0,
@@ -163,7 +142,7 @@ function initSliders() {
         320: {
           slidesPerView: 1.3,
           spaceBetween: 15,
-          autoHeight: true,
+          // autoHeight: true,
         },
         768: {
           slidesPerView: 3,

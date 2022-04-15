@@ -6,7 +6,7 @@
   line-height: 1;
   font-weight: 700;
   &_dark {
-    color: $mainColor;
+    color: $mainDark;
   }
 }
 .subtitle {
@@ -16,7 +16,7 @@
   line-height: math.div(36, 30);
   font-weight: 700;
   &_dark {
-    color: $mainColor;
+    color: $mainDark;
   }
   &_thin {
     font-weight: 400;
@@ -240,6 +240,11 @@
     margin-bottom: 30px;
     @media (max-width: em(768)) {
       margin-bottom: 10px;
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 25px;
     }
   }
 }
