@@ -43,8 +43,6 @@
       cursor: pointer;
     }
   }
-  &__paggination {
-  }
 }
 
 .hero__paggination.swiper-pagination {
@@ -54,6 +52,9 @@
   width: 100%;
   display: flex;
   align-items: center;
+  @media (max-width: em(768)) {
+    margin-top: 20px;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -106,8 +107,9 @@
       padding-bottom: percent(412, 1220);
     }
     .couple-images__small-image {
+      border-radius: 5px;
       img {
-        border-radius: 7px;
+        border-radius: 5px;
       }
     }
   }
@@ -117,12 +119,17 @@
   }
   &__big-image {
     max-width: percent(1090, 1220);
-    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    overflow: hidden;
     img {
       width: 100%;
       object-fit: contain;
       border-radius: 7px;
       overflow: hidden;
+    }
+    @media (max-width: em(768)) {
+      margin-bottom: 12px;
     }
   }
   &__small-image {
@@ -132,6 +139,14 @@
     bottom: 0;
     max-width: percent(244, 1220);
     box-shadow: 0 15px 30px rgba(47, 47, 57, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    @media (max-width: em(768)) {
+      border-radius: 7px;
+    }
+    @media (max-width: em(480)) {
+      border-radius: 4px;
+    }
     img {
       width: 100%;
       object-fit: contain;
@@ -491,6 +506,8 @@
     transform: translate(0, -50%);
     max-width: percent(480, 800);
     box-shadow: 0 15px 30px rgba(47, 47, 57, 0.3);
+    border-radius: 7px;
+    overflow: hidden;
     img {
       width: 100%;
       object-fit: contain;
@@ -546,12 +563,12 @@
     transform: translateX(-50%);
     @include adaptiveValue("margin-bottom", 27, 8);
     max-width: percent(480, 980);
-    box-shadow: 0 15px 30px rgba(47, 47, 57, 0.3);
     img {
       width: 100%;
       object-fit: contain;
-      border-radius: 7px;
+      border-radius: 5px;
       overflow: hidden;
+      box-shadow: 0 15px 30px rgba(47, 47, 57, 0.3);
     }
   }
 }
