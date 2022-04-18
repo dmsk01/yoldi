@@ -132,6 +132,7 @@
   line-height: math.div(25, 18);
   border-radius: 80px;
   background-color: #414150;
+  color: #fff;
   transition: color 0.3s ease-in, background-color 0.5s ease;
   &_yellow {
     background-color: $mainYellow;
@@ -245,6 +246,132 @@
   &__text {
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+}
+
+// Slider hero section =====
+.hero__paggination.swiper-pagination {
+  // max-width: 170px;
+  min-height: 20px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: em(768)) {
+    margin-top: 20px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $mainYellow;
+  }
+}
+.swiper-pagination-bullet-active {
+  &::after {
+    display: block;
+  }
+}
+
+// Couple of images ===
+.couple-images {
+  max-width: 100%;
+  &_big {
+    .couple-images__big-image,
+    .couple-images__small-image {
+      max-width: percent(942, 1220);
+    }
+    .couple-images__big-image {
+      padding-bottom: percent(412, 1220);
+    }
+    .couple-images__small-image {
+      border-radius: 5px;
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+  &_sell {
+    .couple-images__big-image {
+      margin-bottom: 52px;
+      @media (max-width: em(768)) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    position: relative;
+  }
+  &__big-image {
+    max-width: percent(1090, 1220);
+    margin-bottom: 40px;
+    border-radius: 7px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+    @media (max-width: em(768)) {
+      margin-bottom: 12px;
+    }
+  }
+  &__small-image {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    max-width: percent(244, 1220);
+    box-shadow: 0 15px 30px rgba(47, 47, 57, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    @media (max-width: em(768)) {
+      border-radius: 7px;
+    }
+    @media (max-width: em(480)) {
+      border-radius: 4px;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 15px;
+      overflow: hidden;
+      @media (max-width: em(768)) {
+        border-radius: 7px;
+      }
+      @media (max-width: em(480)) {
+        border-radius: 4px;
+      }
     }
   }
 }
