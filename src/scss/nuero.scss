@@ -132,7 +132,10 @@
   @media (max-width: em(768)) {
     padding: 20px;
   }
-  &__title {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 30px;
     padding-bottom: 15px;
     position: relative;
@@ -147,6 +150,18 @@
     }
     @media (max-width: em(768)) {
       margin-bottom: 20px;
+    }
+  }
+  &__title {
+    flex: 0 0 335px;
+    margin-right: 40px;
+    @include adaptiveValue("margin-right", 40, 0);
+  }
+  &__desc {
+    color: #8a8a97;
+    font-size: 20px;
+    @media (max-width: em(768)) {
+      display: none;
     }
   }
   &__inner {

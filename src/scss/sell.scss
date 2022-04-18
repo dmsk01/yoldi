@@ -14,3 +14,31 @@
     }
   }
 }
+
+.sell-main-composition {
+  &__sale-reg {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+}
+
+.sell-reg {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    @media (max-width: em(768)) {
+      margin-bottom: 5px;
+    }
+  }
+  &__content {
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  &__image-ibg {
+    padding-bottom: percent(602, 1090);
+    display: flex;
+    justify-content: center;
+  }
+}
