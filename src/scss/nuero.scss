@@ -124,6 +124,11 @@
   padding: 30px;
   background: #e9e9e9;
   color: $mainDark;
+  &_vertical {
+    & .users-about__inner {
+      flex-direction: column;
+    }
+  }
   @media (max-width: em(768)) {
     padding: 20px;
   }
@@ -145,6 +150,8 @@
     }
   }
   &__inner {
+    counter-reset: section;
+
     @media (min-width: em(768)) {
       display: flex;
       margin: 0 -30px;
@@ -158,7 +165,7 @@
   }
 }
 .about-user {
-  &:first-child {
+  &:not(:last-child) {
     position: relative;
     &::after {
       content: "";
@@ -180,6 +187,53 @@
         right: 0;
         background: url("../img/icons/horisontal-dash.svg") 0 0 repeat-x;
       }
+    }
+  }
+  &_horizontal {
+    display: flex;
+    align-items: flex-start;
+    .about-user__title {
+      flex: 0 0 335px;
+      margin-right: 40px;
+      @include adaptiveValue("margin-right", 40, 0);
+      &::before {
+        content: counter(section, decimal) ".";
+        counter-increment: section;
+        display: inline-block;
+        @include adaptiveValue("width", 65, 22);
+        @include adaptiveValue("margin-right", 40, 10);
+        @include adaptiveValue("font-size", 30, 20);
+        line-height: math.div(36, 30);
+        color: $mainDark;
+      }
+      @media (max-width: em(768)) {
+        flex: 1 1 100%;
+        &::before {
+          width: 22px;
+          margin-right: 10px;
+        }
+      }
+    }
+    &:not(:last-child) {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      &::after {
+        width: calc(100% - 60px);
+        height: 1px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: url("../img/icons/horisontal-dash.svg") 0 0 repeat-x;
+      }
+      @media (max-width: em(768)) {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: em(768)) {
+      flex-direction: column;
     }
   }
   &__title {

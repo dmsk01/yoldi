@@ -18,6 +18,9 @@
   &_dark {
     color: $mainDark;
   }
+  &_grey {
+    color: $darkGrey;
+  }
   &_thin {
     font-weight: 400;
   }
@@ -372,6 +375,69 @@
       @media (max-width: em(480)) {
         border-radius: 4px;
       }
+    }
+  }
+}
+
+// About project =====
+.about-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: em(768)) {
+    flex-direction: column;
+  }
+  &__main {
+    max-width: 590px;
+    width: 100%;
+    padding-right: 20px;
+    @media (max-width: em(768)) {
+      padding-right: 0;
+      margin-bottom: 30px;
+      max-width: none;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
+    }
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    span {
+      color: $mainYellow;
+    }
+  }
+  &__aside {
+    max-width: 380px;
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: $mainYellow;
+    }
+    @media (max-width: em(768)) {
+      padding-left: 20px;
+      max-width: none;
+    }
+  }
+  &__aside-title {
+    margin-bottom: 20px;
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
     }
   }
 }
