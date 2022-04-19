@@ -26,6 +26,9 @@
   &__admin-cabinet {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__points-withdrawal {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 .sell-reg {
@@ -104,8 +107,78 @@
   }
   &__image-ibg {
     max-width: 1090px;
-    padding-bottom: percent(953, 1220 );
+    padding-bottom: percent(953, 1220);
     margin: 0 auto;
     width: 100%;
+  }
+}
+
+// Points withwrawal section =====
+
+.points-withdrawal {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: em(768)) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__column {
+    &:first-child {
+      margin-right: 20px;
+      @media (max-width: em(768)) {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      flex: 0 0 380px;
+      @media (max-width: em(768)) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    @media (max-width: em(768)) {
+      padding: 0 20px;
+    }
+  }
+
+  &__image {
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+    &:first-child {
+      flex: 0 1 480px;
+      max-width: 480px;
+      width: 100%;
+      margin-right: 20px;
+      @media (max-width: em(768)) {
+        margin-right: 7px;
+      }
+    }
+    &:last-child {
+      flex: 0 1 229px;
+      max-width: 229px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    max-width: 380px;
+    width: 100%;
+    @media (max-width: em(768)) {
+      max-width: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
   }
 }
