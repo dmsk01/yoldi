@@ -43,6 +43,19 @@
       cursor: pointer;
     }
   }
+  &__slide {
+    transition: opacity 0.3s ease 0s;
+    &:not(:first-child) {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loaded & {
+      &:not(:first-child) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 // Nuero about section
