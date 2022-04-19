@@ -19,7 +19,6 @@
   &__sale-reg {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
-
   &__form-fill {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
@@ -29,7 +28,12 @@
   &__points-withdrawal {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__confirm-withdrawal {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
+
+// Sell registration
 
 .sell-reg {
   &__info {
@@ -178,7 +182,33 @@
       margin-bottom: 30px;
     }
   }
+}
 
+// Confirm withdrawal =====
+
+.confirm-withdrawal {
+  &__info {
+    @include adaptiveValue("margin-bottom", 85, 30);
+  }
   &__subtitle {
+    @media (max-width: em(768)) {
+      font-size: 16px;
+    }
+  }
+
+  &__info-content {
+    max-width: 695px;
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  &__image-ibg {
+    padding-bottom: percent(761, 1090);
+    display: flex;
+    justify-content: center;
   }
 }
