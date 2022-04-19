@@ -23,6 +23,9 @@
   &__form-fill {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__admin-cabinet {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 .sell-reg {
@@ -81,5 +84,28 @@
   }
 
   &__subtitle {
+  }
+}
+
+// Admin cabinet =====
+
+.sell-admin-cabinet {
+  &__info {
+    @include adaptiveValue("margin-bottom", 85, 30);
+  }
+  &__subtitle {
+    @media (max-width: em(768)) {
+      font-size: 16px;
+    }
+  }
+  &__info-content {
+    max-width: 695px;
+    width: 100%;
+  }
+  &__image-ibg {
+    max-width: 1090px;
+    padding-bottom: percent(953, 1220 );
+    margin: 0 auto;
+    width: 100%;
   }
 }

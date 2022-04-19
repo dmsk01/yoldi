@@ -534,6 +534,7 @@
   }
   &__text {
     max-width: 485px;
+    width: 100%;
     @media (max-width: em(768)) {
       max-width: none;
     }

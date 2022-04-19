@@ -5,8 +5,17 @@
   @include adaptiveValue("font-size", 60, 36);
   line-height: 1;
   font-weight: 700;
+  @media (max-width: em(768)) {
+    line-height: math.div(36, 30);
+  }
   &_dark {
     color: $mainDark;
+  }
+  &_medium {
+    @include adaptiveValue("font-size", 60, 30);
+    @media (max-width: em(768)) {
+      line-height: math.div(36, 30);
+    }
   }
   &_small {
     @include adaptiveValue("font-size", 40, 20);
@@ -123,6 +132,8 @@
   }
 }
 
+// Tags section =====
+
 .tags {
   display: flex;
   align-items: center;
@@ -191,6 +202,8 @@
   }
 }
 
+// Button =====
+
 .button {
   &_soaring {
     color: $mainDark;
@@ -224,6 +237,7 @@
 }
 
 // Section info block (header)====
+
 .info-block {
   max-width: 800px;
   width: 100%;
@@ -232,13 +246,15 @@
     display: flex;
     align-items: flex-start;
     max-width: none;
-    .info-block__title {
+    .info-block__heading {
       margin-right: 40px;
       margin-bottom: 0;
     }
+    .info-block__title {
+    }
     @media (max-width: em(768)) {
       flex-direction: column;
-      .info-block__title {
+      .info-block__heading {
         margin-right: 0;
         margin-bottom: 10px;
       }
@@ -247,15 +263,24 @@
   @media (max-width: em(768)) {
     padding: 0 20px;
   }
-  &__title {
+  &__heading {
     margin-bottom: 30px;
     @media (max-width: em(768)) {
       margin-bottom: 10px;
     }
   }
+  &__title {
+    // margin-bottom: 30px;
+    // @media (max-width: em(768)) {
+    //   margin-bottom: 10px;
+    // }
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
   &__text {
     &:not(:last-child) {
-      margin-bottom: 25px;
+      @include adaptiveValue("margin-bottom", 25, 10);
     }
   }
 }
