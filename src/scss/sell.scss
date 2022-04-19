@@ -19,6 +19,10 @@
   &__sale-reg {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+
+  &__form-fill {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 .sell-reg {
@@ -40,5 +44,42 @@
     padding-bottom: percent(602, 1090);
     display: flex;
     justify-content: center;
+  }
+}
+
+// Form fill block =====
+
+.sell-form-fill {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    &:first-child {
+      flex: 0 1 380px;
+      margin-right: 10px;
+      @media (max-width: em(992)) {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      flex: 0 1 695px;
+      @media (max-width: em(768)) {
+        flex: 1 1 100%;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  &__info {
+  }
+
+  &__subtitle {
   }
 }

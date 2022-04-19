@@ -8,10 +8,13 @@
   &_dark {
     color: $mainDark;
   }
+  &_small {
+    @include adaptiveValue("font-size", 40, 20);
+    line-height: math.div(44, 40);
+  }
 }
 .subtitle {
   color: #fff;
-  font-size: 30px;
   @include adaptiveValue("font-size", 30, 20);
   line-height: math.div(36, 30);
   font-weight: 700;
@@ -23,6 +26,10 @@
   }
   &_thin {
     font-weight: 400;
+  }
+  &_small {
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: math.div(28, 20);
   }
   &_noshrink {
     font-size: 30px;
@@ -313,13 +320,26 @@
       max-width: percent(942, 1220);
     }
     .couple-images__big-image {
-      padding-bottom: percent(412, 1220);
+      margin-bottom: percent(412, 1220);
     }
     .couple-images__small-image {
       border-radius: 5px;
       img {
         border-radius: 5px;
       }
+    }
+  }
+  &_medium {
+    .couple-images__big-image,
+    .couple-images__small-image {
+      max-width: percent(480, 695);
+      border-radius: 7px;
+      img {
+        border-radius: 7px;
+      }
+    }
+    .couple-images__big-image {
+      margin-bottom: percent(221, 695);
     }
   }
   &_sell {
