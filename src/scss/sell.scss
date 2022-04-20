@@ -423,5 +423,7 @@
 
   &__image-ibg {
     padding-bottom: percent(360, 202);
+    border-radius: 10px;
+    overflow: hidden;
   }
 }
