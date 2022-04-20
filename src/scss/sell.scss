@@ -40,6 +40,9 @@
   &__news {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__mobile-version {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 // Sell registration
@@ -376,12 +379,49 @@
       }
     }
   }
-  
+
   &__first-image-ibg {
     padding-bottom: percent(451, 590);
   }
 
   &__second-image-ibg {
     padding-bottom: percent(667, 590);
+  }
+}
+
+// Mobile vertion =====
+
+.sell-mobile-version {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+  &__info-content {
+    max-width: 800px;
+    width: 100%;
+  }
+  &__content {
+    @include adaptiveValue("margin-left", -75, 0);
+    @include adaptiveValue("margin-right", -75, 0);
+    @media (max-width: em(1440)) {
+      margin: 0;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    &:first-child {
+      @include adaptiveValue("margin-bottom", 32, 8);
+    }
+  }
+
+  &__column {
+    flex: 0 1 201px;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-right", 32, 8);
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(360, 202);
   }
 }
