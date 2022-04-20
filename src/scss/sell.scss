@@ -31,6 +31,9 @@
   &__confirm-withdrawal {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__learn-testing {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 // Sell registration
@@ -210,5 +213,75 @@
     padding-bottom: percent(761, 1090);
     display: flex;
     justify-content: center;
+  }
+}
+
+// Learn & testing section =====
+
+.learn-testing {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+  &__info-content {
+    max-width: 1010px;
+  }
+  &__content {
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  &__first-image-ibg {
+    padding-bottom: percent(1109, 1090);
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
+  &__second-image-ibg {
+    padding-bottom: percent(705, 1090);
+    @include adaptiveValue("margin-bottom", 100, 60);
+    @include adaptiveValue("margin-top", 80, 30);
+  }
+  &__third-image {
+  }
+  &__text {
+    max-width: 1010px;
+    margin: 0 auto;
+    width: 100%;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 10);
+    }
+    @media (max-width: em(768)) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.third-image-learn-testing {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include adaptiveValue("margin-top", 80, 30);
+  @media (max-width: em(768)) {
+    padding: 0 20px;
+  }
+  &__row {
+    display: flex;
+  }
+
+  &__column {
+    flex: 0 1 480px;
+    &:first-child {
+      @include adaptiveValue("margin-right", 40, 12);
+    }
+  }
+
+  &__first-ibg {
+    padding-bottom: percent(378, 480);
+  }
+
+  &__second-ibg {
+    padding-bottom: percent(122, 480);
+    @include adaptiveValue("margin-bottom", 30, 9);
+  }
+
+  &__third-ibg {
+    padding-bottom: percent(410, 480);
   }
 }
