@@ -37,6 +37,9 @@
   &__learning-creation {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
+  &__news {
+    @include adaptiveValue("margin-bottom", 100, 60);
+  }
 }
 
 // Sell registration
@@ -330,5 +333,55 @@
 
   &__third-ibg {
     padding-bottom: percent(1232, 480);
+  }
+}
+
+// News sell section =====
+
+.news-sell {
+  &__info {
+    @include adaptiveValue("margin-bottom", 80, 30);
+  }
+  &__heading {
+    flex: 0 1 275px;
+    @media (max-width: em(768)) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__info-content {
+    max-width: 695px;
+    width: 100%;
+  }
+
+  &__subtitle {
+    max-width: 200px;
+    width: 100%;
+    @media (max-width: em(768)) {
+      max-width: none;
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__column {
+    flex: 0 1 590px;
+    &:first-child {
+      margin-right: 40px;
+      @media (max-width: em(768)) {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  &__first-image-ibg {
+    padding-bottom: percent(451, 590);
+  }
+
+  &__second-image-ibg {
+    padding-bottom: percent(667, 590);
   }
 }
