@@ -14,9 +14,40 @@
     }
   }
 }
+// Sell composition header =====
+
+.sell-composition {
+  &__header {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 100, 50);
+    @media (max-width: em(992)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media (max-width: em(768)) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    margin-right: 30px;
+    @include adaptiveValue("font-size", 40, 30);
+    line-height: math.div(44, 40);
+    font-weight: 700;
+    white-space: nowrap;
+    @media (max-width: em(992)) {
+      line-height: math.div(42, 30);
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// =========
 
 .sell-main-composition {
-  &__sale-reg {
+  &__sell-reg {
     @include adaptiveValue("margin-bottom", 100, 60);
   }
   &__form-fill {
@@ -51,10 +82,20 @@
   &__info {
     @include adaptiveValue("margin-bottom", 80, 30);
   }
+  &__title {
+    @include adaptiveValue("font-size", 60, 30);
+    line-height: math.div(60, 60);
+    font-weight: 700;
+    @media (max-width: em(768)) {
+      line-height: math.div(36, 30);
+    }
+  }
   &__subtitle {
     margin-bottom: 10px;
     @media (max-width: em(768)) {
       margin-bottom: 5px;
+      font-size: 16px;
+      line-height: math.div(22, 16);
     }
   }
   &__content {
@@ -98,15 +139,9 @@
       }
     }
   }
-
-  &__info {
-  }
-
-  &__subtitle {
-  }
 }
 
-// Admin cabinet =====
+// Registration confirm Admin cabinet =====
 
 .sell-admin-cabinet {
   &__info {
@@ -115,6 +150,7 @@
   &__subtitle {
     @media (max-width: em(768)) {
       font-size: 16px;
+      line-height: math.div(22, 16);
     }
   }
   &__info-content {
@@ -123,15 +159,33 @@
   }
   &__image-ibg {
     max-width: 1090px;
-    padding-bottom: percent(953, 1220);
+    padding-bottom: percent(953, 1090);
     margin: 0 auto;
     width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
   }
 }
 
 // Points withwrawal section =====
 
 .points-withdrawal {
+  &__title {
+    @include adaptiveValue("font-size", 60, 30);
+    line-height: math.div(60, 60);
+    font-weight: 700;
+    @media (max-width: em(768)) {
+      line-height: math.div(36, 30);
+    }
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    @media (max-width: em(768)) {
+      font-size: 16px;
+      line-height: math.div(22, 16);
+      margin-bottom: 5px;
+    }
+  }
   &__row {
     display: flex;
     align-items: center;
@@ -302,7 +356,13 @@
     @include adaptiveValue("margin-bottom", 80, 30);
   }
 
-  &__info-content {
+  &__subtitle {
+    margin-bottom: 10px;
+    @media (max-width: em(768)) {
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: math.div(22, 16);
+    }
   }
 }
 
@@ -362,6 +422,8 @@
     width: 100%;
     @media (max-width: em(768)) {
       max-width: none;
+      font-size: 16px;
+      line-height: math.div(22, 16);
     }
   }
 
@@ -425,5 +487,8 @@
     padding-bottom: percent(360, 202);
     border-radius: 10px;
     overflow: hidden;
+    @media (max-width: em(768)) {
+      border-radius: 2px;
+    }
   }
 }

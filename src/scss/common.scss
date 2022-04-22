@@ -136,12 +136,15 @@
 
 .tags {
   display: flex;
+  height: 100%;
   align-items: center;
   flex-wrap: wrap;
   &__item {
-    margin-bottom: 10px;
     &:not(:last-child) {
       margin-right: 10px;
+    }
+    @media (max-width: em(1440)) {
+      margin-bottom: 10px;
     }
   }
 }
@@ -440,12 +443,20 @@
     }
   }
   &__subtitle {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    @media (max-width: em(768)) {
+      font-size: 16px;
+      line-height: math.div(22.4, 16);
+    }
   }
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 60, 30);
+    line-height: 1;
     @media (max-width: em(768)) {
       margin-bottom: 10px;
+      line-height: math.div(36, 30);
     }
   }
   &__text {

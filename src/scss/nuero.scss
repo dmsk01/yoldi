@@ -9,33 +9,43 @@
 
 .hero {
   padding: 60px 0;
+  @include adaptiveValue("margin-bottom", 40, 0);
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 800px;
-    margin: 0 auto 60px;
+    margin: 0 auto 64px;
     width: 100%;
     text-align: center;
+    @media (max-width: em(1440)) {
+      margin-bottom: 50px;
+    }
   }
   &__year {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
     color: #8a8a97;
     @include adaptiveValue("font-size", 30, 18);
-    @include adaptiveValue("line-height", 36, 25);
+    @include adaptiveValue("line-height", 36, 25.2);
   }
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     font-size: 70px;
     font-weight: 700;
     @include adaptiveValue("font-size", 70, 30);
     @include adaptiveValue("line-height", 70, 36);
+    @media (max-width: em(768)) {
+      margin-bottom: 10px;
+    }
   }
   &__desc {
     @include adaptiveValue("font-size", 30, 18);
     @include adaptiveValue("line-height", 36, 25);
     margin-bottom: 30px;
+    @media (max-width: em(768)) {
+      margin-bottom: 20px;
+    }
   }
   &__tags {
     justify-content: center;
@@ -45,6 +55,7 @@
   }
   &__slide {
     transition: opacity 0.3s ease 0s;
+    width: 100%;
     &:not(:first-child) {
       opacity: 0;
       visibility: hidden;
@@ -121,9 +132,14 @@
     }
   }
   &__aside-title {
+    color: #fff;
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: math.div(36, 30);
+    font-weight: 700;
     margin-bottom: 20px;
     @media (max-width: em(768)) {
       margin-bottom: 10px;
+      line-height: 160%;
     }
   }
   &__users {
@@ -152,6 +168,9 @@
     margin-bottom: 30px;
     padding-bottom: 15px;
     position: relative;
+    &_closer {
+      margin-bottom: 25px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -286,6 +305,8 @@
     font-weight: 700;
     @media (max-width: 768px) {
       margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 42px;
     }
   }
 }
